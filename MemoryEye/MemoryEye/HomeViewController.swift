@@ -20,7 +20,9 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate, UIIm
         vc.sourceType = .camera
         vc.allowsEditing = true
         vc.delegate = self
-        present(vc, animated: true)
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            present(vc, animated: true)
+        }
 //        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "lol") as?
 //            ViewController
 //        {
