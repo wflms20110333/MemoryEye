@@ -27,11 +27,28 @@ class ViewController: UIViewController {
         let projectId = "f248636d-d065-48fc-81ee-f7b43dbe613d"
         
         // prepare json data
-        let json: [String: Any] = ["images": [
-            "url": "string",
+        let json: [String: Any] = [
+            "images": [
+                [
+                    "url": "https://cdn11.bigcommerce.com/s-zb4ffa3sum/images/stencil/1280x1280/products/11485/11748/Mouse-ELISA-Assays__68488.1533166943.jpg?c=2?imbypass=on",
+                    "tagIds": [
+                        "mouse"
+                    ],
+                    "regions": [
+                        [
+                            "tagId": "mouse",
+                            "left": 0.0,
+                            "top": 0.0,
+                            "width": 0.0,
+                            "height": 0.0
+                        ]
+                    ]
+                ]
+            ],
             "tagIds": [
-                "string"
-            ]]]
+                "mouse"
+            ]
+        ]
         
         let jsonData = try? JSONSerialization.data(withJSONObject: json)
         print(jsonData)
@@ -47,8 +64,6 @@ class ViewController: UIViewController {
         // set header values
         request.setValue("4b0f271e887740d2aa11154f42ee60b0", forHTTPHeaderField: "Training-Key")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("insert-subscription-key-triggered", forHTTPHeaderField: "Training-key")
-        
         
         request.httpBody = jsonData
         
