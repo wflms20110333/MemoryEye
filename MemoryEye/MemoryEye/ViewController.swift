@@ -14,8 +14,17 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var imgMem1: UIImageView!
+    @IBOutlet weak var imgMem2: UIImageView!
+    @IBOutlet weak var imgMem3: UIImageView!
+    @IBOutlet weak var imgMem4: UIImageView!
+    
     @IBOutlet weak var addSign1: UIButton!
+    @IBOutlet weak var addSign2: UIButton!
+    @IBOutlet weak var addSign3: UIButton!
+    @IBOutlet weak var addSign4: UIButton!
+    
     var imagePicker = UIImagePickerController()
+    var count: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +37,10 @@ class ViewController: UIViewController {
         textView.layer.borderWidth = 0.5
         textView.layer.cornerRadius = 5.0
         textView.layer.borderColor = UIColor.lightGray.cgColor
-        addSign1.layer.cornerRadius = 15.0
+        addSign1.layer.cornerRadius = 11.0
+        addSign2.layer.cornerRadius = 11.0
+        addSign3.layer.cornerRadius = 11.0
+        addSign4.layer.cornerRadius = 11.0
     }
 
     @IBAction func addImage1(_ sender: Any) {
@@ -44,7 +56,51 @@ class ViewController: UIViewController {
         alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
         
         self.present(alert, animated: true, completion: nil)
-        addSign1.setTitle("-", for: .normal)
+    }
+    
+    @IBAction func addImage2(_ sender: Any) {
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Take Photo", style: .default, handler: { _ in
+            self.openCamera()
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Choose Photo", style: .default, handler: { _ in
+            self.openGallary()
+        }))
+        
+        alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func addImage3(_ sender: Any) {
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Take Photo", style: .default, handler: { _ in
+            self.openCamera()
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Choose Photo", style: .default, handler: { _ in
+            self.openGallary()
+        }))
+        
+        alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func addImage4(_ sender: Any) {
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Take Photo", style: .default, handler: { _ in
+            self.openCamera()
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Choose Photo", style: .default, handler: { _ in
+            self.openGallary()
+        }))
+        
+        alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     func openCamera(){
@@ -86,7 +142,17 @@ extension ViewController:  UIImagePickerControllerDelegate, UINavigationControll
         }
         
         if let editedImage = info[.editedImage] as? UIImage{
-            self.imgMem1.image = editedImage
+            if self.count == 0 {
+                self.imgMem1.image = editedImage
+            } else if self.count == 1 {
+                self.imgMem2.image = editedImage
+            } else if self.count == 2 {
+                self.imgMem3.image = editedImage
+            } else {
+                self.imgMem4.image = editedImage
+            }
+            self.count += 1
+            
         }
         
         //Dismiss the UIImagePicker after selection
