@@ -14,7 +14,7 @@
 #endif
 
 #if GPB_USE_PROTOBUF_FRAMEWORK_IMPORTS
- #import <Protobuf/Api.pbobjc.h>
+#import <protobuf/Api.pbobjc.h>
  #import <Protobuf/SourceContext.pbobjc.h>
  #import <Protobuf/Type.pbobjc.h>
 #else

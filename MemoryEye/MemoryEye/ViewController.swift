@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        ComputerVision.test()
+//        ComputerVision.test()
     }
 }
 
@@ -79,7 +79,7 @@ class Memories {
             imgURLArray.append(url)
         }
         
-        tagID = ComputerVision.addImages(imgURLArray, tag)
+        let tagID = ComputerVision.addImages(imageUrls: imgURLArray, tagName: tag ?? "")
         
         // Store img urls and tagID in database
         db.child("memories").child(tag!).setValue(["imgs": imgURLArray,
@@ -91,7 +91,7 @@ class Memories {
     // Returns: info (date, location, time) corresponding to the object that the Custom Vision model predicts the image matches.
     func rememberMemory(img: UIImage) {
         let imgURL = uploadImage(img: img)
-        let probs = ComputerVision.classify(imgURL)
+        let probs = ComputerVision.classify(imageUrl: imgURL, publishName: "fix")
         
         // finish method based on what Elizabeth returns
     }
