@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController {
 
@@ -32,6 +33,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let db = Database.database().reference()
+        let storage = Storage.storage().reference()
+//        db.setValue("hi")
         // Do any additional setup after loading the view.
         
         datePicker.datePickerMode = UIDatePicker.Mode.date
@@ -183,7 +188,7 @@ class ViewController: UIViewController {
             "text": text,
             "img": img
         ]
-        print(memory)
+        Memories.storeNewMemory(loc: location?.text ?? "", date: date?.date.description ?? "", text: text?.text ?? "", name: name?.text ?? "", imgs: img as! Array<UIImage>)
     }
 }
 

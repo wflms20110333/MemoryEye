@@ -11,19 +11,24 @@ import FirebaseStorage
 import Firebase
 import Foundation
 
+public var finalURL = [String]()
+
 class Memories {
-    static let db = Database.database().reference()
-    static let storage = Storage.storage().reference()
-    
+    static func randomString(length: Int) -> String {
+        let letters = "abcdefghijklmnoppqrstuvwxyzABCDEFGGHIJKLMNOPQRSTUVWXYZ0123456789"
+        return String((0..<length).map{_ in letters.randomElement()!})
+    }
     // Helper function to add images to Firebase Storage, then retrieve its URL
     // Params: img (UIImage type)
     // Returns: url of the image
-    static func uploadImage(img: UIImage) -> String {
+    static func uploadImage(img: UIImage) {
+        let db = Database.database().reference()
+        let storage = Storage.storage().reference()
+        
         let imgPNG = img.pngData()!
-        let imgRef = storage.child("name.jpg")
+        let imgRef = storage.child(randomString(length: 8) + ".png")
         
         // upload to firebase storage, then retrieve url
-        var finalURL = "temp"
         let uploadTask = imgRef.putData(imgPNG, metadata: nil) { (metadata, error) in
             guard let metadata = metadata else {
                 // Uh-oh, an error occurred!
@@ -35,17 +40,21 @@ class Memories {
                     // Uh-oh, an error occurred!
                     return
                 }
-                finalURL = downloadURL.absoluteString
+                finalURL.append(downloadURL.absoluteString)
             }
         }
-        return finalURL
+//        return finalURL
     }
     
     static func setIterationNum(num: intmax_t) {
+        let db = Database.database().reference()
+        let storage = Storage.storage().reference()
         db.child("memories").child("iterationNum").setValue(["n": num])
     }
     
     static func getIterationNum() -> intmax_t {
+        let db = Database.database().reference()
+        let storage = Storage.storage().reference()
         var n = -1
         db.child("memories").child("iterationNum").observeSingleEvent(of: .value, with: { (snapshot) in
             if !snapshot.exists() { return }
@@ -63,6 +72,8 @@ class Memories {
     //         imgs (array of UIImages corresponding to the memory)
     // Returns: Nothing, just adds stuff to database and updates Custom Vision model.
     static func storeNewMemory(loc: String, date: String, text: String, name: String, imgs: Array<UIImage>) {
+        let db = Database.database().reference()
+        let storage = Storage.storage().reference()
         let tag = db.child("memories").childByAutoId().key
         
         // Store location, date, text, and name into database
@@ -70,16 +81,17 @@ class Memories {
                                                    "date": date,
                                                    "text": text,
                                                    "name": name])
-        var imgURLArray: Array<String> = Array()
+//        var imgURLArray: Array<String> = Array()
         for img in imgs {
-            let url = uploadImage(img: img)
-            imgURLArray.append(url)
+            uploadImage(img: img)
+//            imgURLArray.append(url)
         }
+        sleep(10)
         
-        let tagID = ComputerVision.addTrainPublish(imageUrls: imgURLArray, tagName: tag ?? "")
+        let tagID = ComputerVision.addTrainPublish(imageUrls: finalURL, tagName: tag ?? "")
         
         // Store img urls and tagID in database
-        db.child("memories").child(tag!).setValue(["imgs": imgURLArray,
+        db.child("memories").child(tag!).setValue(["imgs": finalURL,
                                                    "tagID": tagID])
     }
     
@@ -87,9 +99,11 @@ class Memories {
     // Params: img (type UIImage)
     // Returns: info (date, location, time) corresponding to the object that the Custom Vision model predicts the image matches.
     static func rememberMemory(img: UIImage) {
-        let imgURL = uploadImage(img: img)
-        let n = getIterationNum()
-        let probs = ComputerVision.classify(imageUrl: imgURL, publishName: "Iteration\(n)")
+        let db = Database.database().reference()
+//        let storage = Storage.storage().reference()
+//        let imgURL = uploadImage(img: img)
+//        let n = getIterationNum()
+//        let probs = ComputerVision.classify(imageUrl: imgURL, publishName: "Iteration\(n)")
         
         // finish method based on what Elizabeth returns
     }
