@@ -12,7 +12,15 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate, UIIm
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let nav = self.navigationController?.navigationBar
+        let alert = UIAlertController(title: "No image found :(", message: "Would you like to try again or see your list of memories?", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Yes", style: .destructive, handler: {(alert: UIAlertAction!) in NotificationCenter.default.post(name: NSNotification.Name(rawValue: "nameOfNotification"), object: nil)}))
+        alert.addAction(UIAlertAction(title: "No", style: .destructive, handler: nil))
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(lol), name: NSNotification.Name(rawValue: "nameOfNotification"), object: nil)
+        
+        self.present(alert, animated: true)
     }
     
     @IBAction func pushedMemoryEyeButton(_ sender: Any) {
@@ -31,6 +39,12 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate, UIIm
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let alert = UIAlertController(title: "No image found :(", message: "Would you like to try again or see your list of memories?", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Yes", style: .destructive, handler: {(alert: UIAlertAction!) in NotificationCenter.default.post(name: NSNotification.Name(rawValue: "nameOfNotification"), object: nil)}))
+        alert.addAction(UIAlertAction(title: "No", style: .destructive, handler: nil))
+        
+        self.present(alert, animated: true)
         picker.dismiss(animated: true)
         
         guard let image = info[.editedImage] as? UIImage else {
@@ -40,5 +54,9 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate, UIIm
         
         // print out the image size as a test
         print(image.size)
+    }
+    
+    @objc func lol() -> Void {
+        print("fatass")
     }
 }

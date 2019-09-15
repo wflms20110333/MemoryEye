@@ -14,6 +14,8 @@
 		9E0607AC232D7218004E5615 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E0607AA232D7218004E5615 /* LaunchScreen.storyboard */; };
 		9E0607B8232D806C004E5615 /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E0607B7232D806C004E5615 /* HomePage.storyboard */; };
 		9E0607BA232D82E6004E5615 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0607B9232D82E6004E5615 /* HomeViewController.swift */; };
+		9EEDBDCB232DE753007E5832 /* MemoryList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EEDBDCA232DE753007E5832 /* MemoryList.storyboard */; };
+		9EEDBDCD232DE8C8007E5832 /* MemoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEDBDCC232DE8C8007E5832 /* MemoryListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		9E0607AD232D7218004E5615 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E0607B7232D806C004E5615 /* HomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
 		9E0607B9232D82E6004E5615 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9EEDBDC9232DDC6C007E5832 /* MemoryEye.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MemoryEye.entitlements; sourceTree = "<group>"; };
+		9EEDBDCA232DE753007E5832 /* MemoryList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MemoryList.storyboard; sourceTree = "<group>"; };
+		9EEDBDCC232DE8C8007E5832 /* MemoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +63,7 @@
 		9E0607A0232D7216004E5615 /* MemoryEye */ = {
 			isa = PBXGroup;
 			children = (
+				9EEDBDC9232DDC6C007E5832 /* MemoryEye.entitlements */,
 				9E0607A1232D7216004E5615 /* AppDelegate.swift */,
 				9E0607A3232D7216004E5615 /* ViewController.swift */,
 				9E0607A5232D7216004E5615 /* Main.storyboard */,
@@ -66,6 +72,8 @@
 				9E0607AD232D7218004E5615 /* Info.plist */,
 				9E0607B7232D806C004E5615 /* HomePage.storyboard */,
 				9E0607B9232D82E6004E5615 /* HomeViewController.swift */,
+				9EEDBDCA232DE753007E5832 /* MemoryList.storyboard */,
+				9EEDBDCC232DE8C8007E5832 /* MemoryListViewController.swift */,
 			);
 			path = MemoryEye;
 			sourceTree = "<group>";
@@ -102,6 +110,11 @@
 				TargetAttributes = {
 					9E06079D232D7216004E5615 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -131,6 +144,7 @@
 				9E0607B8232D806C004E5615 /* HomePage.storyboard in Resources */,
 				9E0607AC232D7218004E5615 /* LaunchScreen.storyboard in Resources */,
 				9E0607A9232D7218004E5615 /* Assets.xcassets in Resources */,
+				9EEDBDCB232DE753007E5832 /* MemoryList.storyboard in Resources */,
 				9E0607A7232D7216004E5615 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E0607A4232D7216004E5615 /* ViewController.swift in Sources */,
+				9EEDBDCD232DE8C8007E5832 /* MemoryListViewController.swift in Sources */,
 				9E0607A2232D7216004E5615 /* AppDelegate.swift in Sources */,
 				9E0607BA232D82E6004E5615 /* HomeViewController.swift in Sources */,
 			);
