@@ -10,9 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var nameMem: UITextField!
+    @IBOutlet weak var locationMem: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
-    
     @IBOutlet weak var textView: UITextView!
+    
     @IBOutlet weak var imgMem1: UIImageView!
     @IBOutlet weak var imgMem2: UIImageView!
     @IBOutlet weak var imgMem3: UIImageView!
@@ -34,7 +36,6 @@ class ViewController: UIViewController {
         
         datePicker.datePickerMode = UIDatePicker.Mode.date
         
-        textView.textColor = .lightGray
         textView.text = ""
         textView.layer.borderWidth = 0.5
         textView.layer.cornerRadius = 5.0
@@ -43,6 +44,10 @@ class ViewController: UIViewController {
         addSign2.layer.cornerRadius = 11.0
         addSign3.layer.cornerRadius = 11.0
         addSign4.layer.cornerRadius = 11.0
+        
+        self.title = "Memory"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(addTapped))
         
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(self.keyboardNotification(notification:)),
@@ -158,6 +163,26 @@ class ViewController: UIViewController {
         imagePicker.allowsEditing = true
         imagePicker.delegate = self
         self.present(imagePicker, animated: true, completion: nil)
+    }
+    
+    @objc func addTapped(){
+        let name = nameMem
+        let location = locationMem
+        let date = datePicker
+        let text = textView
+        let img = [self.imgMem1.image, self.imgMem2.image, self.imgMem3.image, self.imgMem4.image]
+        print(name?.text ?? "No value provided")
+        print(location?.text ?? "No value provided")
+        print(date ?? "No value provided")
+        print(text?.text ?? "No value provided")
+        print(img)
+        let memory: [String: Any] = [
+            "name": name,
+            "location": location,
+            "date": date,
+            "text": text,
+            "img": img
+        ]
     }
 }
 
