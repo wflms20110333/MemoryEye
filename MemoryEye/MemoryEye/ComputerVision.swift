@@ -46,6 +46,15 @@ class ComputerVision {
 //        print(predictions)
     }
     
+    static func addTrainPublish(imageUrls: Array<String>, tagName: String) -> String {
+        let tagID = addImages(imageUrls: imageUrls, tagName: tagName)
+        let iterationID = train()
+        let n = Memories.getIterationNum() + 1
+        publish(iterationID: iterationID, n: n)
+        Memories.setIterationNum(num: n)
+        return tagID
+    }
+    
     /// Classifies a given image.
     ///
     /// - Parameters:
@@ -65,11 +74,9 @@ class ComputerVision {
     /// - Parameters:
     ///   - iteration ID: The iteration ID of the model to publish.
     ///   - n: The iteration number in the publish name.
-    /// - Returns: The published name of the model.
-    static func publish(iterationID: String, n: intmax_t) -> String {
+    static func publish(iterationID: String, n: intmax_t) {
         let publishName = "Iteration\(n)"
         requestWrapper(method: "POST", apiUrl: "iterations/" + iterationID + "/publish?publishName=" + publishName + "&predictionId=/subscriptions/d0146674-735f-420a-8f3e-415d9d8a09ba/resourceGroups/MemoryEye/providers/Microsoft.CognitiveServices/accounts/MemoryEyeCV_Prediction")
-        return publishName
     }
     
     /// Trains the model.

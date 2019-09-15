@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		15119948232E4D02005BD683 /* ComputerVision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15119947232E4D02005BD683 /* ComputerVision.swift */; };
+		1511994C232E5C65005BD683 /* Memories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1511994B232E5C65005BD683 /* Memories.swift */; };
 		262E230F232DC48E006BCFF1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9E0607AD232D7218004E5615 /* Info.plist */; };
 		262E2311232DD05F006BCFF1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 262E2310232DD05E006BCFF1 /* GoogleService-Info.plist */; };
 		9E0607A2232D7216004E5615 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0607A1232D7216004E5615 /* AppDelegate.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		15119947232E4D02005BD683 /* ComputerVision.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComputerVision.swift; sourceTree = "<group>"; };
+		1511994B232E5C65005BD683 /* Memories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memories.swift; sourceTree = "<group>"; };
 		262E2310232DD05E006BCFF1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		65F7095ECF23AA31C3F35170 /* Pods-MemoryEye.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryEye.release.xcconfig"; path = "Target Support Files/Pods-MemoryEye/Pods-MemoryEye.release.xcconfig"; sourceTree = "<group>"; };
 		8D57B8F126299D7BDE7F345B /* Pods-MemoryEye.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryEye.debug.xcconfig"; path = "Target Support Files/Pods-MemoryEye/Pods-MemoryEye.debug.xcconfig"; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				262E2310232DD05E006BCFF1 /* GoogleService-Info.plist */,
 				9E0607A1232D7216004E5615 /* AppDelegate.swift */,
 				9E0607A3232D7216004E5615 /* ViewController.swift */,
+				1511994B232E5C65005BD683 /* Memories.swift */,
 				9E0607A5232D7216004E5615 /* Main.storyboard */,
 				9E0607A8232D7218004E5615 /* Assets.xcassets */,
 				9E0607AA232D7218004E5615 /* LaunchScreen.storyboard */,
@@ -214,6 +217,7 @@
 			files = (
 				9E0607A4232D7216004E5615 /* ViewController.swift in Sources */,
 				9E0607A2232D7216004E5615 /* AppDelegate.swift in Sources */,
+				1511994C232E5C65005BD683 /* Memories.swift in Sources */,
 				15119948232E4D02005BD683 /* ComputerVision.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
