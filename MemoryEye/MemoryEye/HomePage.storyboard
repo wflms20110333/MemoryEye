@@ -48,6 +48,9 @@
                                 <state key="normal" title="Add Memory">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="bO0-Ue-z5E" kind="show" id="jRX-96-y3n"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxW-WW-53V">
                                 <rect key="frame" x="57" y="572" width="300" height="50"/>
@@ -59,6 +62,9 @@
                                 <state key="normal" title="View All Memories">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="f7H-CD-64i" kind="show" id="yMH-dQ-IgZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -82,6 +88,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="89i-VL-4Vw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="884.05797101449286" y="-206.25"/>
+        </scene>
+        <!--viewMemory-->
+        <scene sceneID="QSZ-0R-Lvp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ViewMemory" referencedIdentifier="viewMemory" id="f7H-CD-64i" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JiQ-KM-xkc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1508" y="-149"/>
+        </scene>
+        <!--editMemory-->
+        <scene sceneID="3Xe-NO-ZQN">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="editMemory" storyboardName="Main" referencedIdentifier="editMemory" id="bO0-Ue-z5E" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pdZ-oY-Kql" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1531" y="-278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Icy-xd-spp">
