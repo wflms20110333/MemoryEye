@@ -21,6 +21,9 @@ class HomeViewController: UIViewController, UINavigationControllerDelegate, UIIm
         NotificationCenter.default.addObserver(self, selector: #selector(lol), name: NSNotification.Name(rawValue: "nameOfNotification"), object: nil)
         
         self.present(alert, animated: true)
+        
+        self.title = "Welcome Hacker"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     @IBAction func pushedMemoryEyeButton(_ sender: Any) {
