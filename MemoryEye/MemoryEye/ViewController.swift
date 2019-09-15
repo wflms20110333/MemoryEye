@@ -11,6 +11,8 @@ import Foundation
 
 class ViewController: UIViewController {
 
+    var httpResponse: [String: Any] = [:]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -19,79 +21,72 @@ class ViewController: UIViewController {
     
     func test() {
         print("Hello World")
-        train(imageUrl: "shhh")
+//        train(imageUrl: "shhh")
     }
     
-    func train(imageUrl: String) {
-        let endpoint = "https://eastus.api.cognitive.microsoft.com/"
-        let projectId = "f248636d-d065-48fc-81ee-f7b43dbe613d"
-        
+    func createTag(tag: String) -> String {
+        sendRequest(method: "POST", apiUrl: "tags?name=" + tag, json: [:])
+        return self.httpResponse["id"] as! String
+    }
+    
+    func createImage(imageUrl: String, tagID: String) {
         // prepare json data
-        let json: [String: Any] = [
+        let createImageJSON: [String: Any] = [
             "images": [
                 [
-                    "url": "https://cdn11.bigcommerce.com/s-zb4ffa3sum/images/stencil/1280x1280/products/11485/11748/Mouse-ELISA-Assays__68488.1533166943.jpg",
-                    "tagIds": [
-                        "mouse"
-                    ],
-                    "regions": [
-                        [
-                            "tagId": "mouse",
-                            "left": 0.0,
-                            "top": 0.0,
-                            "width": 0.0,
-                            "height": 0.0
-                        ]
-                    ]
+                    "url": imageUrl
                 ]
-            ],
-            "tagIds": [
-                "mouse"
             ]
         ]
         
-        let jsonData = try? JSONSerialization.data(withJSONObject: json)
+        sendRequest(method: "POST", apiUrl: "images/urls", json: createImageJSON)
+//        let tagID = "3b8a6307-9326-4f5d-8e02-adc2a9dd8be4"
+//        let imgID = "1d3d176e-3ba5-49c0-bf49-24fd1cd4351d"
+        let imgID = self.httpResponse as j
+        ["images"]?[0]["image"]["id"] as! String
         
-        if let dumbass = jsonData, let JSONString = String(data: dumbass, encoding: String.Encoding.utf8) {
-            print(JSONString)
-        }
+        let associateJSON: [String: Any] = [
+            "tags": [
+                [
+                    "imageId": imgID,
+                    "tagId": tagID
+                ]
+            ]
+        ]
+        
+        sendRequest(method: "POST", apiUrl: "images/tags", json: associateJSON)
+    }
+    
+    func sendRequest(method: String, apiUrl: String, json: [String: Any]) {
+//        let endpoint = "https://eastus.api.cognitive.microsoft.com/"
+//        let projectId = "f248636d-d065-48fc-81ee-f7b43dbe613d"
+        var headers: [String: String] = [:];
+        headers["Training-Key"] = ""
+        headers["Content-Type"] = "application/json"
+        headers["Training-key"] = "4b0f271e887740d2aa11154f42ee60b0"
+        
+        
 //
-//        {
-//            "images": [
-//                {
-//                    "regions": [
-//                        {
-//                            "left": 0,
-//                            "top": 0,
-//                            "width": 0,
-//                            "height": 0,
-//                            "tagId": "mouse"
-//                        }
-//                    ],
-//                    "url": "https:\/\/cdn11.bigcommerce.com\/s-zb4ffa3sum\/images\/stencil\/1280x1280\/products\/11485\/11748\/Mouse-ELISA-Assays__68488.1533166943.jpg",
-//                    "tagIds": [
-//                        "mouse"
-//                    ]
-//                }
-//            ],
-//            "tagIds": [
-//                "mouse"
-//            ]
+//        if let dumbass = jsonData, let JSONString = String(data: dumbass, encoding: String.Encoding.utf8) {
+//            print(JSONString)
 //        }
         
-        // create post request
-        let httpUrl = endpoint + "customvision/v3.0/training/projects/" + projectId + "/images/urls"
+        // create request
+        let httpUrl = "https://eastus.api.cognitive.microsoft.com/customvision/v3.0/training/projects/f248636d-d065-48fc-81ee-f7b43dbe613d/" + apiUrl
         guard let url = URL(string: httpUrl) else {
             return
         }
         var request = URLRequest(url: url)
-        request.httpMethod = "POST"
+        request.httpMethod = method
         
         // set header values
-        request.setValue("", forHTTPHeaderField: "Training-Key")
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("4b0f271e887740d2aa11154f42ee60b0", forHTTPHeaderField: "Training-key")
+        for (key, value) in headers {
+            request.setValue(value, forHTTPHeaderField: key)
+        }
         
+        // prepare json data
+        let jsonData = try? JSONSerialization.data(withJSONObject: json)
+        // set body values
         request.httpBody = jsonData
         
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
@@ -101,11 +96,12 @@ class ViewController: UIViewController {
                 return
             }
             let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
-            print(responseJSON)
             if let responseJSON = responseJSON as? [String: Any] {
-//                print(responseJSON)
+                self.httpResponse = responseJSON
+                print(responseJSON)
             }
         }
         task.resume()
+        print("resuming")
     }
 }
