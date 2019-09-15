@@ -4,12 +4,19 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--newMemory-->
+        <scene sceneID="XtY-ux-qvI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="newMemory" id="HmC-Da-fcC" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MtJ-AS-5Ep" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1671" y="-206"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="Xb0-sh-NNc">
             <objects>
@@ -48,6 +55,9 @@
                                 <state key="normal" title="Add Memory">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="HmC-Da-fcC" kind="show" id="eaR-gd-FE4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxW-WW-53V">
                                 <rect key="frame" x="57" y="572" width="300" height="50"/>

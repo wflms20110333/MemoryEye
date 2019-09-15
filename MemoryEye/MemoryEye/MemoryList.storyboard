@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -83,14 +82,7 @@
                         <viewLayoutGuide key="safeArea" id="f8y-My-n0f"/>
                     </view>
                     <connections>
-                        <outlet property="cellImage" destination="xJ1-ld-T9v" id="yuT-5U-agH"/>
-                        <outlet property="cellLocation" destination="Erg-NZ-b2C" id="zHl-80-Vnx"/>
-                        <outlet property="cellName" destination="ViQ-g5-prW" id="Mmx-FZ-S5E"/>
-                        <outlet property="dateCell" destination="qIC-8e-d2n" id="4AN-k5-SJE"/>
-                        <outlet property="imageCell" destination="xJ1-ld-T9v" id="Zbd-ao-LGk"/>
-                        <outlet property="locationCell" destination="Erg-NZ-b2C" id="nGL-8s-Mey"/>
                         <outlet property="memoryTable" destination="3na-PH-GFt" id="sf0-rr-eev"/>
-                        <outlet property="nameCell" destination="ViQ-g5-prW" id="PL1-Ed-u99"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jvS-u3-yqV" userLabel="First Responder" sceneMemberID="firstResponder"/>

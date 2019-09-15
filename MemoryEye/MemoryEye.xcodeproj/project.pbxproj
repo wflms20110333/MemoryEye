@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		15119948232E4D02005BD683 /* ComputerVision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15119947232E4D02005BD683 /* ComputerVision.swift */; };
 		1511994C232E5C65005BD683 /* Memories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1511994B232E5C65005BD683 /* Memories.swift */; };
+		1511994D232E6676005BD683 /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E0607B7232D806C004E5615 /* HomePage.storyboard */; };
+		1511994E232E667B005BD683 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0607B9232D82E6004E5615 /* HomeViewController.swift */; };
 		262E230F232DC48E006BCFF1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9E0607AD232D7218004E5615 /* Info.plist */; };
 		262E2311232DD05F006BCFF1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 262E2310232DD05E006BCFF1 /* GoogleService-Info.plist */; };
 		9E0607A2232D7216004E5615 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0607A1232D7216004E5615 /* AppDelegate.swift */; };
@@ -35,7 +37,6 @@
 		9E0607AD232D7218004E5615 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E0607B7232D806C004E5615 /* HomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
 		9E0607B9232D82E6004E5615 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		9EEDBDC9232DDC6C007E5832 /* MemoryEye.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MemoryEye.entitlements; sourceTree = "<group>"; };
 		9EEDBDCA232DE753007E5832 /* MemoryList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MemoryList.storyboard; sourceTree = "<group>"; };
 		9EEDBDCC232DE8C8007E5832 /* MemoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,9 +175,9 @@
 			files = (
 				262E230F232DC48E006BCFF1 /* Info.plist in Resources */,
 				9E0607AC232D7218004E5615 /* LaunchScreen.storyboard in Resources */,
+				1511994D232E6676005BD683 /* HomePage.storyboard in Resources */,
 				262E2311232DD05F006BCFF1 /* GoogleService-Info.plist in Resources */,
 				9E0607A9232D7218004E5615 /* Assets.xcassets in Resources */,
-				9EEDBDCB232DE753007E5832 /* MemoryList.storyboard in Resources */,
 				9E0607A7232D7216004E5615 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,8 +231,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1511994E232E667B005BD683 /* HomeViewController.swift in Sources */,
 				9E0607A4232D7216004E5615 /* ViewController.swift in Sources */,
-				9EEDBDCD232DE8C8007E5832 /* MemoryListViewController.swift in Sources */,
 				9E0607A2232D7216004E5615 /* AppDelegate.swift in Sources */,
 				1511994C232E5C65005BD683 /* Memories.swift in Sources */,
 				15119948232E4D02005BD683 /* ComputerVision.swift in Sources */,
