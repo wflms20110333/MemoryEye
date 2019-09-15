@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15119946232DFD20005BD683 /* ComputerVision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15119945232DFD20005BD683 /* ComputerVision.swift */; };
 		9E0607A2232D7216004E5615 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0607A1232D7216004E5615 /* AppDelegate.swift */; };
 		9E0607A4232D7216004E5615 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0607A3232D7216004E5615 /* ViewController.swift */; };
 		9E0607A7232D7216004E5615 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E0607A5232D7216004E5615 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15119945232DFD20005BD683 /* ComputerVision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerVision.swift; sourceTree = "<group>"; };
 		9E06079E232D7216004E5615 /* MemoryEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E0607A1232D7216004E5615 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E0607A3232D7216004E5615 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				9E0607A1232D7216004E5615 /* AppDelegate.swift */,
 				9E0607A3232D7216004E5615 /* ViewController.swift */,
+				15119945232DFD20005BD683 /* ComputerVision.swift */,
 				9E0607A5232D7216004E5615 /* Main.storyboard */,
 				9E0607A8232D7218004E5615 /* Assets.xcassets */,
 				9E0607AA232D7218004E5615 /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			files = (
 				9E0607A4232D7216004E5615 /* ViewController.swift in Sources */,
 				9E0607A2232D7216004E5615 /* AppDelegate.swift in Sources */,
+				15119946232DFD20005BD683 /* ComputerVision.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
