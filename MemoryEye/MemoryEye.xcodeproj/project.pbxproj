@@ -3,22 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15119948232E4D02005BD683 /* ComputerVision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15119947232E4D02005BD683 /* ComputerVision.swift */; };
+		1511994C232E5C65005BD683 /* Memories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1511994B232E5C65005BD683 /* Memories.swift */; };
+		262E230F232DC48E006BCFF1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9E0607AD232D7218004E5615 /* Info.plist */; };
+		262E2311232DD05F006BCFF1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 262E2310232DD05E006BCFF1 /* GoogleService-Info.plist */; };
 		9E0607A2232D7216004E5615 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0607A1232D7216004E5615 /* AppDelegate.swift */; };
 		9E0607A4232D7216004E5615 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0607A3232D7216004E5615 /* ViewController.swift */; };
 		9E0607A7232D7216004E5615 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E0607A5232D7216004E5615 /* Main.storyboard */; };
 		9E0607A9232D7218004E5615 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E0607A8232D7218004E5615 /* Assets.xcassets */; };
 		9E0607AC232D7218004E5615 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E0607AA232D7218004E5615 /* LaunchScreen.storyboard */; };
-		9E0607B8232D806C004E5615 /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E0607B7232D806C004E5615 /* HomePage.storyboard */; };
-		9E0607BA232D82E6004E5615 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0607B9232D82E6004E5615 /* HomeViewController.swift */; };
-		9EEDBDCB232DE753007E5832 /* MemoryList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EEDBDCA232DE753007E5832 /* MemoryList.storyboard */; };
-		9EEDBDCD232DE8C8007E5832 /* MemoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEDBDCC232DE8C8007E5832 /* MemoryListViewController.swift */; };
+		DC4D1249EA5AB61E7FF0B334 /* Pods_MemoryEye.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985077AC43C596EEE8F9BF77 /* Pods_MemoryEye.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15119947232E4D02005BD683 /* ComputerVision.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComputerVision.swift; sourceTree = "<group>"; };
+		1511994B232E5C65005BD683 /* Memories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memories.swift; sourceTree = "<group>"; };
+		262E2310232DD05E006BCFF1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		65F7095ECF23AA31C3F35170 /* Pods-MemoryEye.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryEye.release.xcconfig"; path = "Target Support Files/Pods-MemoryEye/Pods-MemoryEye.release.xcconfig"; sourceTree = "<group>"; };
+		8D57B8F126299D7BDE7F345B /* Pods-MemoryEye.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoryEye.debug.xcconfig"; path = "Target Support Files/Pods-MemoryEye/Pods-MemoryEye.debug.xcconfig"; sourceTree = "<group>"; };
+		985077AC43C596EEE8F9BF77 /* Pods_MemoryEye.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemoryEye.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E06079E232D7216004E5615 /* MemoryEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E0607A1232D7216004E5615 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E0607A3232D7216004E5615 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,17 +45,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC4D1249EA5AB61E7FF0B334 /* Pods_MemoryEye.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8EF2F9B936906A53F2E015C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8D57B8F126299D7BDE7F345B /* Pods-MemoryEye.debug.xcconfig */,
+				65F7095ECF23AA31C3F35170 /* Pods-MemoryEye.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		9E060795232D7216004E5615 = {
 			isa = PBXGroup;
 			children = (
 				9E0607A0232D7216004E5615 /* MemoryEye */,
 				9E06079F232D7216004E5615 /* Products */,
+				8EF2F9B936906A53F2E015C4 /* Pods */,
+				CB0D80E84472B563858678F9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,9 +82,11 @@
 		9E0607A0232D7216004E5615 /* MemoryEye */ = {
 			isa = PBXGroup;
 			children = (
-				9EEDBDC9232DDC6C007E5832 /* MemoryEye.entitlements */,
+				15119947232E4D02005BD683 /* ComputerVision.swift */,
+				262E2310232DD05E006BCFF1 /* GoogleService-Info.plist */,
 				9E0607A1232D7216004E5615 /* AppDelegate.swift */,
 				9E0607A3232D7216004E5615 /* ViewController.swift */,
+				1511994B232E5C65005BD683 /* Memories.swift */,
 				9E0607A5232D7216004E5615 /* Main.storyboard */,
 				9E0607A8232D7218004E5615 /* Assets.xcassets */,
 				9E0607AA232D7218004E5615 /* LaunchScreen.storyboard */,
@@ -78,6 +99,14 @@
 			path = MemoryEye;
 			sourceTree = "<group>";
 		};
+		CB0D80E84472B563858678F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				985077AC43C596EEE8F9BF77 /* Pods_MemoryEye.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,9 +114,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9E0607B0232D7218004E5615 /* Build configuration list for PBXNativeTarget "MemoryEye" */;
 			buildPhases = (
+				B140B414E6A5D6F7B6B233A6 /* [CP] Check Pods Manifest.lock */,
 				9E06079A232D7216004E5615 /* Sources */,
 				9E06079B232D7216004E5615 /* Frameworks */,
 				9E06079C232D7216004E5615 /* Resources */,
+				5A6A67FA861DA2A2EF668A0F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,8 +172,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E0607B8232D806C004E5615 /* HomePage.storyboard in Resources */,
+				262E230F232DC48E006BCFF1 /* Info.plist in Resources */,
 				9E0607AC232D7218004E5615 /* LaunchScreen.storyboard in Resources */,
+				262E2311232DD05F006BCFF1 /* GoogleService-Info.plist in Resources */,
 				9E0607A9232D7218004E5615 /* Assets.xcassets in Resources */,
 				9EEDBDCB232DE753007E5832 /* MemoryList.storyboard in Resources */,
 				9E0607A7232D7216004E5615 /* Main.storyboard in Resources */,
@@ -150,6 +182,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5A6A67FA861DA2A2EF668A0F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MemoryEye/Pods-MemoryEye-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MemoryEye/Pods-MemoryEye-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MemoryEye/Pods-MemoryEye-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B140B414E6A5D6F7B6B233A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MemoryEye-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9E06079A232D7216004E5615 /* Sources */ = {
@@ -159,7 +233,8 @@
 				9E0607A4232D7216004E5615 /* ViewController.swift in Sources */,
 				9EEDBDCD232DE8C8007E5832 /* MemoryListViewController.swift in Sources */,
 				9E0607A2232D7216004E5615 /* AppDelegate.swift in Sources */,
-				9E0607BA232D82E6004E5615 /* HomeViewController.swift in Sources */,
+				1511994C232E5C65005BD683 /* Memories.swift in Sources */,
+				15119948232E4D02005BD683 /* ComputerVision.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +378,7 @@
 		};
 		9E0607B1232D7218004E5615 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D57B8F126299D7BDE7F345B /* Pods-MemoryEye.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -321,6 +397,7 @@
 		};
 		9E0607B2232D7218004E5615 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65F7095ECF23AA31C3F35170 /* Pods-MemoryEye.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
