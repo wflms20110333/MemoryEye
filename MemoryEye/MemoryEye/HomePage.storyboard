@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A9j-3Y-Pia">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="Xb0-sh-NNc">
+            <objects>
+                <viewController id="heY-YN-qDN" customClass="HomeViewController" customModule="MemoryEye" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B2A-F1-Qtu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Hacker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qS8-nc-yOd">
+                                <rect key="frame" x="59.5" y="129" width="295.5" height="43"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evS-9e-NNm">
+                                <rect key="frame" x="57" y="272" width="300" height="50"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="JdJ-gv-UMY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Memory Eye">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="pushedMemoryEyeButton:" destination="heY-YN-qDN" eventType="touchUpInside" id="nXh-eE-MXX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ysb-B9-vUf">
+                                <rect key="frame" x="57" y="422" width="300" height="50"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="bgU-0A-yjj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Add Memory">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxW-WW-53V">
+                                <rect key="frame" x="57" y="572" width="300" height="50"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="eXF-Pe-bIZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="View All Memories">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dxW-WW-53V" firstAttribute="leading" secondItem="9OC-R8-RvX" secondAttribute="leading" constant="57" id="1rX-PU-WsH"/>
+                            <constraint firstItem="9OC-R8-RvX" firstAttribute="trailing" secondItem="dxW-WW-53V" secondAttribute="trailing" constant="57" id="5Hg-g0-hZp"/>
+                            <constraint firstItem="qS8-nc-yOd" firstAttribute="top" secondItem="9OC-R8-RvX" secondAttribute="top" constant="41" id="5LV-fA-jB0"/>
+                            <constraint firstItem="evS-9e-NNm" firstAttribute="leading" secondItem="9OC-R8-RvX" secondAttribute="leading" constant="57" id="Fcm-hc-ZUe"/>
+                            <constraint firstItem="dxW-WW-53V" firstAttribute="top" secondItem="Ysb-B9-vUf" secondAttribute="bottom" constant="100" id="K3u-Fw-i8q"/>
+                            <constraint firstItem="Ysb-B9-vUf" firstAttribute="top" secondItem="evS-9e-NNm" secondAttribute="bottom" constant="100" id="bJx-jf-ndH"/>
+                            <constraint firstItem="Ysb-B9-vUf" firstAttribute="leading" secondItem="9OC-R8-RvX" secondAttribute="leading" constant="57" id="gHS-N2-4B8"/>
+                            <constraint firstItem="qS8-nc-yOd" firstAttribute="centerX" secondItem="9OC-R8-RvX" secondAttribute="centerX" id="nvH-PP-bwW"/>
+                            <constraint firstItem="evS-9e-NNm" firstAttribute="top" secondItem="qS8-nc-yOd" secondAttribute="bottom" constant="100" id="pMN-pr-xyO"/>
+                            <constraint firstItem="9OC-R8-RvX" firstAttribute="trailing" secondItem="Ysb-B9-vUf" secondAttribute="trailing" constant="57" id="qeh-H4-zgw"/>
+                            <constraint firstItem="9OC-R8-RvX" firstAttribute="trailing" secondItem="evS-9e-NNm" secondAttribute="trailing" constant="57" id="z6E-UC-Bfi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9OC-R8-RvX"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hfB-OP-kZB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="89i-VL-4Vw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="884.05797101449286" y="-206.25"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Icy-xd-spp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="A9j-3Y-Pia" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jnk-7u-5J8">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="heY-YN-qDN" kind="relationship" relationship="rootViewController" id="Sft-Ch-6cG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PI7-12-VGo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26.086956521739133" y="-206.25"/>
+        </scene>
+    </scenes>
+</document>

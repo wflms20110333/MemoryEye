@@ -33,6 +33,11 @@
 		9E0607A8232D7218004E5615 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E0607AB232D7218004E5615 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E0607AD232D7218004E5615 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E0607B7232D806C004E5615 /* HomePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
+		9E0607B9232D82E6004E5615 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9EEDBDC9232DDC6C007E5832 /* MemoryEye.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MemoryEye.entitlements; sourceTree = "<group>"; };
+		9EEDBDCA232DE753007E5832 /* MemoryList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MemoryList.storyboard; sourceTree = "<group>"; };
+		9EEDBDCC232DE8C8007E5832 /* MemoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +91,10 @@
 				9E0607A8232D7218004E5615 /* Assets.xcassets */,
 				9E0607AA232D7218004E5615 /* LaunchScreen.storyboard */,
 				9E0607AD232D7218004E5615 /* Info.plist */,
+				9E0607B7232D806C004E5615 /* HomePage.storyboard */,
+				9E0607B9232D82E6004E5615 /* HomeViewController.swift */,
+				9EEDBDCA232DE753007E5832 /* MemoryList.storyboard */,
+				9EEDBDCC232DE8C8007E5832 /* MemoryListViewController.swift */,
 			);
 			path = MemoryEye;
 			sourceTree = "<group>";
@@ -132,6 +141,11 @@
 				TargetAttributes = {
 					9E06079D232D7216004E5615 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -162,6 +176,7 @@
 				9E0607AC232D7218004E5615 /* LaunchScreen.storyboard in Resources */,
 				262E2311232DD05F006BCFF1 /* GoogleService-Info.plist in Resources */,
 				9E0607A9232D7218004E5615 /* Assets.xcassets in Resources */,
+				9EEDBDCB232DE753007E5832 /* MemoryList.storyboard in Resources */,
 				9E0607A7232D7216004E5615 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E0607A4232D7216004E5615 /* ViewController.swift in Sources */,
+				9EEDBDCD232DE8C8007E5832 /* MemoryListViewController.swift in Sources */,
 				9E0607A2232D7216004E5615 /* AppDelegate.swift in Sources */,
 				1511994C232E5C65005BD683 /* Memories.swift in Sources */,
 				15119948232E4D02005BD683 /* ComputerVision.swift in Sources */,
@@ -366,6 +382,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P9FKD3T6ZR;
 				INFOPLIST_FILE = MemoryEye/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -384,6 +401,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P9FKD3T6ZR;
 				INFOPLIST_FILE = MemoryEye/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
