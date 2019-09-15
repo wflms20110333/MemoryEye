@@ -21,11 +21,6 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YE0-2V-KKB">
                                 <rect key="frame" x="0.0" y="44" width="414" height="806"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hl8-YG-cfI">
-                                        <rect key="frame" x="87" y="339" width="240" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New memory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTX-Co-hHj">
                                         <rect key="frame" x="20" y="64" width="208.5" height="41"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
@@ -276,6 +271,7 @@
                         <outlet property="addSign2" destination="euA-CV-22l" id="D19-wW-Xz0"/>
                         <outlet property="addSign3" destination="kd1-Zu-Ww4" id="P8e-Bi-WNd"/>
                         <outlet property="addSign4" destination="cDf-8b-xSt" id="vbC-5i-iEJ"/>
+                        <outlet property="bottomScrollConstraint" destination="CRw-Hy-NmE" id="IqH-DE-mhx"/>
                         <outlet property="datePicker" destination="F5f-ad-O8b" id="97L-N4-kEs"/>
                         <outlet property="imgMem1" destination="AhC-j8-2qG" id="c8N-4H-42M"/>
                         <outlet property="imgMem2" destination="JTl-xX-ynD" id="Tcn-ps-vDV"/>
