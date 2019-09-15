@@ -4,19 +4,12 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--newMemory-->
-        <scene sceneID="XtY-ux-qvI">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="newMemory" id="HmC-Da-fcC" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MtJ-AS-5Ep" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1671" y="-206"/>
-        </scene>
         <!--Home View Controller-->
         <scene sceneID="Xb0-sh-NNc">
             <objects>
@@ -69,9 +62,6 @@
                                 <state key="normal" title="View All Memories">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <segue destination="f7H-CD-64i" kind="show" id="yMH-dQ-IgZ"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -95,14 +85,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="89i-VL-4Vw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="884.05797101449286" y="-206.25"/>
-        </scene>
-        <!--viewMemory-->
-        <scene sceneID="QSZ-0R-Lvp">
-            <objects>
-                <viewControllerPlaceholder storyboardName="ViewMemory" referencedIdentifier="viewMemory" id="f7H-CD-64i" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JiQ-KM-xkc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1508" y="-149"/>
         </scene>
         <!--editMemory-->
         <scene sceneID="3Xe-NO-ZQN">

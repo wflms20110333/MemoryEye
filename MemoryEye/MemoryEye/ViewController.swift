@@ -183,6 +183,7 @@ class ViewController: UIViewController {
             "text": text,
             "img": img
         ]
+        print(memory)
     }
 }
 
