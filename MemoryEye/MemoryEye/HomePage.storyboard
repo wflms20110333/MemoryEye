@@ -18,65 +18,114 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Hacker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qS8-nc-yOd">
-                                <rect key="frame" x="59.5" y="129" width="295.5" height="43"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="37"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evS-9e-NNm">
-                                <rect key="frame" x="57" y="272" width="300" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxW-WW-53V">
+                                <rect key="frame" x="20" y="545" width="375" height="185"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="JdJ-gv-UMY"/>
+                                    <constraint firstAttribute="height" constant="185" id="eXF-Pe-bIZ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                                <inset key="titleEdgeInsets" minX="25" minY="25" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="View All Memories">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evS-9e-NNm">
+                                <rect key="frame" x="20" y="135" width="375" height="185"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="185" id="JdJ-gv-UMY" userLabel="150"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="34"/>
+                                <inset key="titleEdgeInsets" minX="30" minY="30" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Memory Eye">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="pushedMemoryEyeButton:" destination="heY-YN-qDN" eventType="touchUpInside" id="nXh-eE-MXX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ysb-B9-vUf">
-                                <rect key="frame" x="57" y="422" width="300" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ysb-B9-vUf">
+                                <rect key="frame" x="20" y="340" width="375" height="185"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="bgU-0A-yjj"/>
+                                    <constraint firstAttribute="height" constant="185" id="bgU-0A-yjj"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="34"/>
+                                <inset key="titleEdgeInsets" minX="30" minY="30" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Add Memory">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="bO0-Ue-z5E" kind="show" id="jRX-96-y3n"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxW-WW-53V">
-                                <rect key="frame" x="57" y="572" width="300" height="50"/>
+                            <textView autoresizesSubviews="NO" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="The memory eye catches your dearest memories." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0Z-OK-Sho">
+                                <rect key="frame" x="43" y="223" width="305" height="74"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="eXF-Pe-bIZ"/>
+                                    <constraint firstAttribute="width" constant="305" id="aYa-4Z-k4q"/>
+                                    <constraint firstAttribute="height" constant="74" id="xuX-1e-7hd"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="View All Memories">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Get started by adding your favorite memories here." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHv-sP-nVj">
+                                <rect key="frame" x="42" y="435" width="305" height="74"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="305" id="Huc-cK-oIe"/>
+                                    <constraint firstAttribute="height" constant="74" id="y2N-zx-KfO"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Here you'll find a list of all memories captured." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EoU-EV-b8E">
+                                <rect key="frame" x="42" y="630" width="305" height="74"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="paW-LH-3f6"/>
+                                    <constraint firstAttribute="width" constant="305" id="qwz-xZ-x74"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="dxW-WW-53V" firstAttribute="leading" secondItem="9OC-R8-RvX" secondAttribute="leading" constant="57" id="1rX-PU-WsH"/>
-                            <constraint firstItem="9OC-R8-RvX" firstAttribute="trailing" secondItem="dxW-WW-53V" secondAttribute="trailing" constant="57" id="5Hg-g0-hZp"/>
-                            <constraint firstItem="qS8-nc-yOd" firstAttribute="top" secondItem="9OC-R8-RvX" secondAttribute="top" constant="41" id="5LV-fA-jB0"/>
-                            <constraint firstItem="evS-9e-NNm" firstAttribute="leading" secondItem="9OC-R8-RvX" secondAttribute="leading" constant="57" id="Fcm-hc-ZUe"/>
-                            <constraint firstItem="dxW-WW-53V" firstAttribute="top" secondItem="Ysb-B9-vUf" secondAttribute="bottom" constant="100" id="K3u-Fw-i8q"/>
-                            <constraint firstItem="Ysb-B9-vUf" firstAttribute="top" secondItem="evS-9e-NNm" secondAttribute="bottom" constant="100" id="bJx-jf-ndH"/>
-                            <constraint firstItem="Ysb-B9-vUf" firstAttribute="leading" secondItem="9OC-R8-RvX" secondAttribute="leading" constant="57" id="gHS-N2-4B8"/>
-                            <constraint firstItem="qS8-nc-yOd" firstAttribute="centerX" secondItem="9OC-R8-RvX" secondAttribute="centerX" id="nvH-PP-bwW"/>
-                            <constraint firstItem="evS-9e-NNm" firstAttribute="top" secondItem="qS8-nc-yOd" secondAttribute="bottom" constant="100" id="pMN-pr-xyO"/>
-                            <constraint firstItem="9OC-R8-RvX" firstAttribute="trailing" secondItem="Ysb-B9-vUf" secondAttribute="trailing" constant="57" id="qeh-H4-zgw"/>
-                            <constraint firstItem="9OC-R8-RvX" firstAttribute="trailing" secondItem="evS-9e-NNm" secondAttribute="trailing" constant="57" id="z6E-UC-Bfi"/>
+                            <constraint firstItem="dxW-WW-53V" firstAttribute="leading" secondItem="9OC-R8-RvX" secondAttribute="leading" constant="20" id="1rX-PU-WsH"/>
+                            <constraint firstItem="9OC-R8-RvX" firstAttribute="trailing" secondItem="dxW-WW-53V" secondAttribute="trailing" constant="19" id="5Hg-g0-hZp"/>
+                            <constraint firstItem="Ysb-B9-vUf" firstAttribute="leading" secondItem="hHv-sP-nVj" secondAttribute="trailing" constant="-327" id="Ckr-2s-Xje"/>
+                            <constraint firstItem="dxW-WW-53V" firstAttribute="top" secondItem="Ysb-B9-vUf" secondAttribute="bottom" constant="20" id="K3u-Fw-i8q"/>
+                            <constraint firstItem="EoU-EV-b8E" firstAttribute="top" secondItem="dxW-WW-53V" secondAttribute="bottom" constant="-100" id="MIW-Kz-cCY"/>
+                            <constraint firstItem="evS-9e-NNm" firstAttribute="top" secondItem="9OC-R8-RvX" secondAttribute="top" constant="47" id="PO3-iB-HcJ"/>
+                            <constraint firstItem="evS-9e-NNm" firstAttribute="leading" secondItem="9OC-R8-RvX" secondAttribute="leading" constant="20" id="Xk7-VC-C0B"/>
+                            <constraint firstItem="dxW-WW-53V" firstAttribute="leading" secondItem="EoU-EV-b8E" secondAttribute="trailing" constant="-327" id="ZJA-rr-VGt"/>
+                            <constraint firstItem="Ysb-B9-vUf" firstAttribute="top" secondItem="evS-9e-NNm" secondAttribute="bottom" constant="20" id="bJx-jf-ndH"/>
+                            <constraint firstItem="Ysb-B9-vUf" firstAttribute="leading" secondItem="9OC-R8-RvX" secondAttribute="leading" constant="20" id="gHS-N2-4B8"/>
+                            <constraint firstItem="hHv-sP-nVj" firstAttribute="top" secondItem="Ysb-B9-vUf" secondAttribute="bottom" constant="-90" id="iSj-vD-OMs"/>
+                            <constraint firstItem="evS-9e-NNm" firstAttribute="leading" secondItem="Y0Z-OK-Sho" secondAttribute="trailing" constant="-328" id="jvT-Kw-yF6"/>
+                            <constraint firstItem="9OC-R8-RvX" firstAttribute="trailing" secondItem="Ysb-B9-vUf" secondAttribute="trailing" constant="19" id="qeh-H4-zgw"/>
+                            <constraint firstItem="Y0Z-OK-Sho" firstAttribute="top" secondItem="evS-9e-NNm" secondAttribute="bottom" constant="-97" id="tU5-RK-e7u"/>
+                            <constraint firstItem="9OC-R8-RvX" firstAttribute="trailing" secondItem="evS-9e-NNm" secondAttribute="trailing" constant="19" id="z6E-UC-Bfi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9OC-R8-RvX"/>
                     </view>
