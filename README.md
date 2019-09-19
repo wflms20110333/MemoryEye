@@ -1,6 +1,6 @@
 # Memory Eye
 
-Memory Eye is a mobile app that uses computer vision to help users with Alzheimer's remember their prized belongings, and more importantly, their loved ones. MemoryEye allows users to write their own stories by documenting their best memories, and uses the camera as a tool to relive them.
+Memory Eye is a mobile app that uses computer vision to help users with Alzheimer's remember their prized belongings, and more importantly, their loved ones. Memory Eye allows users to write their own stories by documenting their best memories, and uses the camera as a tool to relive them.
 
 Created and demoed at HackMIT 2019 (https://devpost.com/software/memoryeye).
 
